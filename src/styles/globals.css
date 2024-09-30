@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+.backgraund{
+  background-image: url('../images/03fdb791c0c8753db54348da091ba79b.jpeg'); 
+   
+  position: fixed;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;        /* Bordes redondeados del track */
+}
+
+* {
+  scrollbar-width: none;               /* Grosor del scrollbar */
+  scrollbar-color: #888 #272C3B;       /* Color del thumb y del track */
+}
+@media screen and (max-width: 700px){
+  .backgraund{
+    background-color: #272C3B;
+    background-image: none;
+  }
+}
