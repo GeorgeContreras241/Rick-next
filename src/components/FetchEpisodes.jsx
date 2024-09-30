@@ -11,7 +11,7 @@ export const FetchEpisode = ({ episodios }) => {
         <ul className={styles.container__ul}>
             {
                 filtered.map((item) => (
-                    <details>
+                    <details key={item.id}>
                         <summary>{item.episode} : {item.name}</summary>
                         <p className={styles.list__li} key={item.id}>{item.name}<span>. En aire desde el: {item.air_date}</span></p>
                         
