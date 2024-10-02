@@ -1,0 +1,23 @@
+.section__share{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.section__links{
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 9999px;
+}
+.section__links:hover{
+    scale: 1.1;
+}
+@media screen and (max-width: 700px){
+    .section__share{
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+    }
+}

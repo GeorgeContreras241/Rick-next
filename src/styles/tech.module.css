@@ -1,0 +1,67 @@
+.section__tech{
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    max-width:  1050px;
+    justify-content: center;
+}
+.card{
+    height: fit-content;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 15px;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    background-color: #313849;
+}
+.html{
+    font-size: 6rem;
+    color: orange;  
+}
+.css{
+    font-size: 6rem;
+    color: rgb(0, 47, 255);
+}
+.js{
+    font-size: 6rem;
+    color: green;
+}
+.nextjs{
+    font-size: 5.5rem;
+    padding: 0.5rem;
+    color: #fff;
+}
+.rickandmorty{
+    font-size: 6rem;
+    color: orange;
+}
+.card__html{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+.card__html >  h3{
+ font-size: 1.3rem;
+ margin-left: 5px;
+}
+.card__html >  span{
+    margin-top: 10px;
+    margin-left: 12px;
+}
+.card__html >  a{
+    text-decoration: none;
+    text-align: end;
+    margin-right: 10px;
+}
+@media screen and (max-width:700px){
+    .section__tech{
+        margin-top: 0;
+    }
+    .card{
+        width: 100%;
+    }
+    .card__html{
+        width: 100%;
+    }
+}
