@@ -1,13 +1,15 @@
+
+import { Fetch } from "@/components/FetchCharacters";
 import { Search } from "../../components/Search";
-import fetchCharacters from "../../utils/fetchCharacters";
+import fetchCharacters from "../../utils/useFetchCharacters";
+import { useContext } from "react";
+import { AcontextPagination } from "@/contexts/PaginationProvider";
 
 export default async function characters() {
-    const characters = await fetchCharacters()
     
     return (
        <div>
-        <Search characters={characters}></Search>
-        
+        <Search></Search>
         
        </div>
     )

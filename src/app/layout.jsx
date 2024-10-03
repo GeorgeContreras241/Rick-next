@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           <section className="container__main__target">
             <Share/>
           </section>
-          <footer className="container__main__footer"></footer>
+          <footer className="container__main__footer"><a href="#">@ Ir a  Porfolio</a></footer>
         </div>
       </body>
     </html>

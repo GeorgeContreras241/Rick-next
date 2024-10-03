@@ -10,8 +10,8 @@ export const Tech = () => {
             <div className={tech.card}>
                 <FaHtml5 className={tech.html} />
                 <div className={tech.card__html}>
-                    <h3>HTML</h3>
-                    <span>ests es un lejuaje de etiquetas</span>
+                    <h3>HTML 5</h3>
+                    <span>Lenguaje de marcado HTML5 utilizado en el desarrollo web.</span>
                     <a href="#">ver mas</a>
                 </div>
             </div>
@@ -19,7 +19,7 @@ export const Tech = () => {
                 <FaCss3Alt className={tech.css} />
                 <div className={tech.card__html}>
                     <h3>CSS</h3>
-                    <span>ests es un lejuaje de etiquetas</span>
+                    <span>CSS es utilizado para diseñar y dar estilo a las páginas web.</span>
                     <a href="#">ver mas</a>
                 </div>
 
@@ -28,7 +28,7 @@ export const Tech = () => {
                 <FaJs className={tech.js} />
                 <div className={tech.card__html}>
                     <h3>JS</h3>
-                    <span>ests es un lejuaje de etiquetas</span>
+                    <span>JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.</span>
                     <a href="#">ver mas</a>
                 </div>
 
@@ -37,7 +37,7 @@ export const Tech = () => {
                 <SiNextdotjs className={tech.nextjs} />
                 <div className={tech.card__html}>
                     <h3>NEXT JS</h3>
-                    <span>ests es un lejuaje de etiquetas</span>
+                    <span>Next.js es un marco web de desarrollo front-end de React de código abierto creado por Vercel.</span>
                     <a href="#">ver mas</a>
                 </div>
             </div>
@@ -45,7 +45,7 @@ export const Tech = () => {
                 <SiFarfetch className={tech.rickandmorty} />
                 <div className={tech.card__html}>
                     <h3>API Rick and Morty</h3>
-                    <span>ests es un lejuaje de etiquetas</span>
+                    <span>Api de Rick and Morty para entorno de pruebas.</span>
                     <a href="#">ver mas</a>
                 </div>
             </div>

@@ -1,33 +1,37 @@
 "use client"
 import React, { useContext, useState } from 'react'
 import { AcontextPagination } from '../contexts/PaginationProvider'
-import { Fetch } from './FetchCharacters'
 import styles from "./../styles/navegation.module.css"
+import { usefetchCharacters } from '@/utils/useFetchCharacters'
+import { Fetch } from './FetchCharacters'
 
-export const Search = ({characters}) => {
-    const {search, setSearch} = useContext(AcontextPagination)
-    const filteredData = characters.filter((item)=> item.name.toLowerCase().includes(search.toLowerCase()))
+export const Search = () => {
+    const { url, setUrl, search, setSearch } = useContext(AcontextPagination)
+
+    const { characters, info } = usefetchCharacters(url)
     
     const handleSearch = (e) => {
         setSearch(e.target.value)
-        
     }
     const onSubmit = (e) => {
+        setUrl(`https://rickandmortyapi.com/api/character/?page=1&name=${search}`)
         e.preventDefault()
+        
     }
-    
 
     return (
         <div className={styles.container__characters}>
             <form onSubmit={onSubmit}>
-                <input type="text" placeholder='Nombre Personaje'
+                <input 
+                    type="text" 
+                    placeholder="Nombre Personaje"
                     value={search}
                     onChange={handleSearch}
                     className={styles.characters__input}
                 />
+                <button>buscar</button>
             </form>
-            <Fetch characters={filteredData} filteredData={filteredData} search={search}></Fetch>
-            
+            <Fetch characters={characters} info={info}></Fetch>
         </div>
     )
 }
