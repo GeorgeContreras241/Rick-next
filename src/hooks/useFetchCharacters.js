@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 
-export const usefetchCharacters = (url) => {
+export const useFetchCharacters = (url) => {
     const [characters, setCharacters] = useState([])
     const [info, setInfo] = useState({})
     const fetchCharacters = async(url) =>{

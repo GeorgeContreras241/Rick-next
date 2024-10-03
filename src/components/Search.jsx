@@ -2,13 +2,13 @@
 import React, { useContext, useState } from 'react'
 import { AcontextPagination } from '../contexts/PaginationProvider'
 import styles from "./../styles/navegation.module.css"
-import { usefetchCharacters } from '@/utils/useFetchCharacters'
+import { useFetchCharacters } from '@/hooks/useFetchCharacters'
 import { Fetch } from './FetchCharacters'
 
 export const Search = () => {
     const { url, setUrl, search, setSearch } = useContext(AcontextPagination)
 
-    const { characters, info } = usefetchCharacters(url)
+    const { characters, info } = useFetchCharacters(url)
     
     const handleSearch = (e) => {
         setSearch(e.target.value)
