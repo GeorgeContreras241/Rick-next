@@ -1,134 +1,89 @@
-
-.container__characters {
-    width: 60%;
-    margin: 20px 0 0 40px;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 30px;
-    padding: 20px;
-}
-
-.characters__input {
-    border: 1px solid;
-    border-radius: 10px;
-    background-color: inherit;
-    padding: 15px 25px;
-    width: 70%;
-}
-
-.container__list {
-    width: 100%;
-}
-
-.flex__list {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
-    justify-content: space-around;
+.character__profile {
+    width: 80%;
+    height: 92%;
     overflow-y: scroll;
-    height: 70vh;
-    padding: 5px;
-}
-.flex__list::-webkit-scrollbar-button {
-    display: none;  
   }
-
-.container__card {
-    width: 250px;
-    background-color: rgba(91, 92, 92, 0.418);
-    height: 400px;
-    list-style: none;
-    border-radius: 10px;
-}
-
-.container__text {
+  
+  .character__container {
     display: flex;
-    flex-flow: column;
-}
-
-.text_flex {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-.title {
-    font-size: 1.3rem;
-    padding: 5px 10px;
-    font-family: 'Sofadi One', cursive;
-    font-weight: 400;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.location {
-    padding: 5px 15px;
-    text-align: start;
-}
-
-.img {
-    border-radius: 10px 10px 0 0;
-}
-
-.text_flex__title {
-    display: flex;
-    justify-content: space-around;
-    color: rgb(252, 142, 40);
-    position: relative;
-    top: 10px;
-}
-
-.text_flex__title>span {
-    color: rgb(252, 142, 40);
-    font-size: .9rem;
-    opacity: 0.8;
-}
-
-.origen {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 35px;
+  }
+  
+  .character__card {
+    display: flex;
+    background-color: rgb(60, 62, 68);
+    gap: 5px;
+    height: 140px;
+    border-radius: 15px;
+  }
+  
+  .character__image {
+    object-fit: cover;
+  }
+  
+  .character__image > img {
+    width: 150px;
+    height: 140px;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .character__info {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+.character__info > h3{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    white-space: nowrap;    /* Impide que el texto se divida en varias líneas */
+    overflow-x: hidden;
+    text-overflow: ellipsis; /* Añade los puntos suspensivos (...) */
+}
+.character__info > span{
+    color: gray;
+    white-space: nowrap;    /* Impide que el texto se divida en varias líneas */
+    overflow-x: hidden;
+    text-overflow: ellipsis; 
 }
 
-.origen>span {
-    position: relative;
-    top: 7px;
-    color: rgb(252, 142, 40);
-    font-size: .9rem;
-    opacity: 0.8;
+@media screen and (max-width:400px) {
+    .character__profile {
+        width: 100%;
+        
+      }
+    .character__card {
+        flex-flow: column nowrap;
+        width: fit-content;
+        height: fit-content;
+    }
+    .character__image > img {
+        width: 120px;
+        height: 110px;
+        border-radius: 10px ;
+    }
+    .character__info__state{
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+      }
+    .character__info > span, .character__info > p {
+        display: none;
+    }
+    .character__info{
+       width: 120px;
+    }
+    .character__info h3{
+        font-size: 1rem;
+    }
+
+
 }
-.origen > p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 200px;
-}
-.container__bottuns{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-.container__bottuns_pagination{
-    border: none;
-    background-color: inherit;
-    padding: 0px;
-}
-.container__bottuns_pagination:hover{
-    border: none;
-    background-color: #c9c9c938;
-    border-radius: 50%;
-}
-.icon{
-    font-size: 2rem;
-}
-.text__res{
-    position: relative;
-    top: 190px;
-    height: fit-content;
-    font-family: 'Sofadi One', cursive;
-    opacity: 0.;
-}
-    

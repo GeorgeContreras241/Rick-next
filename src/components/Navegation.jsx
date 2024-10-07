@@ -20,10 +20,10 @@ export const Navegation = () => {
     const handleHiden = () => {
         if (menu == "") {
             setMenu(true)
-        }else{
+        } else {
             setMenu(false)
         }
-        
+
     }
     return (
         <>
@@ -46,17 +46,16 @@ export const Navegation = () => {
                     </li>
                 </ul>
                 <div className='hidden__menu'>
-                    <div onClick={handleMenu} className={`menu-toggle ${menu?"open":""}`}>
+                    <div onClick={handleMenu} className={`menu-toggle ${menu ? "open" : ""}`}>
                         <i></i>
                     </div>
                 </div>
 
             </nav>
-            
-            <div className={`menu__desplegable ${menu?"open":""}`} >
-                <ul>
+            <div>
+                <ul className={`menu__desplegable ${menu ? "open" : ""}`}>
                     <li>
-                        <Link className={styles.link__isActive} href="/">Inicio</Link>
+                        <Link className={styles.link} href="/">Inicio</Link>
                     </li>
                     <li>
                         <Link href="/characters">Personajes</Link>
@@ -69,6 +68,9 @@ export const Navegation = () => {
                     </li>
                 </ul>
             </div>
+
+
+
         </>
-    ) 
+    )
 }

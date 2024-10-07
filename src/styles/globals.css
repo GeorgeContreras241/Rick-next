@@ -36,6 +36,7 @@ a{
     "Welcome target"
     "fotter fotter";
     color: #fff;
+    grid-auto-columns: 1fr 100px;
 }
 
 .container__main__header {
@@ -45,12 +46,13 @@ a{
 
 .container__main__body {
   grid-area: Welcome;
+  
  
 }
 
 .container__main__target {
   grid-area: target;
- 
+  align-self: center;
 }
 
 .container__main__footer {
@@ -77,6 +79,7 @@ a{
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 9999;
 }
 .hidden__menu{
   display: none;
@@ -104,37 +107,19 @@ a{
 
 .menu__desplegable{
   display: none;
-  height: 0px;
-  opacity: 0;
-  position: relative;
-  width: 100vw;
-  height: fit-content;
-  background-color: #000000;
-  z-index: 9999;
-  transition: all 1s;
 }
-.menu__desplegable > ul {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 20px;
-  width: 100%;
-  padding: 20px 10px;
-}
-.menu__desplegable>ul>li{
+.menu__desplegable>li{
   list-style: none;
-  text-decoration: none;
-  text-align: center;
 }
-.menu__desplegable>ul>li>a{
+.menu__desplegable>li>a{
   text-decoration: none;
 }
-.menu__desplegable.open{
-  height: fit-content;
-  opacity: .9;
-}
+
 
 @media screen and (max-width: 700px) {
-
+  .container__main__target {
+    align-self: end;
+  }
   .nav__ul{display: none;}
   .container__main {
     grid-template-areas:
@@ -142,6 +127,7 @@ a{
       "Welcome"
       "target"
       "fotter";
+      grid-auto-rows: 60px calc(1fr - 20px) 70px 30px;
   }
   .hidden__menu{
     display: block;
@@ -210,7 +196,25 @@ a{
     transform: rotate(-45deg);
     top: -22px;
   }
+  
   .menu__desplegable{
     display: block;
+    background-color: #272C3B;
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    width: 100px;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    transition: height 1s ease;
+  }
+  
+  .menu__desplegable.open {
+    height: 135px;
+    overflow: hidden;
   }
 }
