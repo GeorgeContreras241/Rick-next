@@ -3,6 +3,8 @@ import characters from "@/app/characters/page"
 import styles from "./../styles/fetchCharacters.module.css"
 import { useContext } from "react"
 import { AcontextPagination } from "@/contexts/PaginationProvider"
+import { GrFormPrevious } from "react-icons/gr";
+import { MdOutlineNavigateNext } from "react-icons/md";
 
 
 
@@ -46,8 +48,10 @@ export const Fetch = ({ characters, info }) => {
           }
         </div>
       </section>
-      <button onClick={() => fetchLastPage(info)}>disminuir</button>
-      <button onClick={() => fetchNextPage(info)}>aumentar</button>
+      <div className={styles.navegation__buttons}>
+        <button onClick={() => fetchLastPage(info)}><GrFormPrevious className={styles.navegation__icons}/></button>
+        <button onClick={() => fetchNextPage(info)}><MdOutlineNavigateNext className={styles.navegation__icons}/></button>
+      </div>
     </>
 
   )

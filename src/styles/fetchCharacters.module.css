@@ -54,6 +54,27 @@
     overflow-x: hidden;
     text-overflow: ellipsis; 
 }
+.navegation__buttons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+}
+.navegation__buttons button{
+  border: none;
+  background-color: rgb(60, 62, 68);
+  padding: 5px;
+}
+.navegation__buttons button:hover{
+  background-color: rgba(85, 86, 88, 0.712);
+}
+.navegation__icons{
+ font-size: 1.5rem;
+ color: #fff;
+ padding: 5px;
+}
+
 
 @media screen and (max-width:400px) {
     .character__profile {
