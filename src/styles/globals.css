@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
-
+:root{
+  --background-color: #d6d6d6;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body, html {
-  overflow: scroll;
+  overflow: scroll;  
 }
-.backgraund {
-  background-color: #272C3B;
+
+.backgraund{
+  background-color: #d6d6d6;
 }
 a{
-  color: #fff;
+  color: #272C3B;
 }
 ::-webkit-scrollbar-track {
   border-radius: 6px;
@@ -35,7 +38,7 @@ a{
     "header header"
     "Welcome target"
     "fotter fotter";
-    color: #fff;
+    color: #000000;
     grid-auto-columns: 1fr 100px;
 }
 
@@ -60,13 +63,14 @@ a{
   display: grid;
   border-top: 1px solid;
   place-items: center;
-  width: 75%;
+  width: 85%;
   margin: auto;
  
 }
 .container__main__footer > a{
   margin: 10px;
   text-decoration: none;
+  color: #272C3B;
 }
 
 
@@ -95,7 +99,6 @@ a{
   font-size: 1.2rem;
   font-weight: 400;
   font-family: 'Sofadi One';
-  color: #c9c9c9;
 }
 
 .nav__ul>li>a {
@@ -103,6 +106,7 @@ a{
   cursor: pointer;
   position: relative;
   font-family: 'Sofadi One', cursive;
+  color: #272C3B;
 }
 
 .menu__desplegable{
@@ -199,7 +203,7 @@ a{
   
   .menu__desplegable{
     display: block;
-    background-color: #272C3B;
+    background-color: #d6d6d6;
     display: flex;
     gap: 10px;
     flex-flow: column;

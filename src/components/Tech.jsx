@@ -1,14 +1,22 @@
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaJs } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { SiFarfetch } from "react-icons/si";
 import tech from "@/styles/tech.module.css"
+import Image from "next/image"
+import CSS from "@/images/CSS.png"
+import JS from "@/images/JS.png"
+import HTML from "@/images/HTML.png"
+import NEXT from "@/images/NEXT.png"
+import RICK from "../../public/rick.png"
+
 export const Tech = () => {
     return (
         <section className={tech.section__tech}>
             <div className={tech.card}>
-                <FaHtml5 className={tech.html} />
+                <div>
+                    <Image src={HTML}
+                    width={100}
+                    height={100}
+                    alt="Rick and Morty"
+                    />
+                </div>
                 <div className={tech.card__html}>
                     <h3>HTML 5</h3>
                     <span>Lenguaje de marcado HTML5 utilizado en el desarrollo web.</span>
@@ -16,7 +24,13 @@ export const Tech = () => {
                 </div>
             </div>
             <div className={tech.card}>
-                <FaCss3Alt className={tech.css} />
+                <div>
+                <Image src={CSS}
+                    width={100}
+                    height={100}
+                    alt="Rick and Morty"
+                    />
+                </div>
                 <div className={tech.card__html}>
                     <h3>CSS</h3>
                     <span>CSS es utilizado para diseñar y dar estilo a las páginas web.</span>
@@ -25,7 +39,13 @@ export const Tech = () => {
 
             </div>
             <div className={tech.card}>
-                <FaJs className={tech.js} />
+                <div>
+                <Image src={JS}
+                    width={100}
+                    height={100}
+                    alt="Rick and Morty"
+                    />
+                </div>
                 <div className={tech.card__html}>
                     <h3>JS</h3>
                     <span>JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.</span>
@@ -34,7 +54,13 @@ export const Tech = () => {
 
             </div>
             <div className={tech.card}>
-                <SiNextdotjs className={tech.nextjs} />
+                <div>
+                <Image src={NEXT}
+                    width={100}
+                    height={100}
+                    alt="Rick and Morty"
+                    />
+                </div>
                 <div className={tech.card__html}>
                     <h3>NEXT JS</h3>
                     <span>Next.js es un marco web de desarrollo front-end de React de código abierto creado por Vercel.</span>
@@ -42,7 +68,13 @@ export const Tech = () => {
                 </div>
             </div>
             <div className={tech.card}>
-                <SiFarfetch className={tech.rickandmorty} />
+                <div>
+                    <Image src={RICK}
+                    width={100}
+                    height={100}
+                    alt="Rick and Morty"
+                    />
+                </div>
                 <div className={tech.card__html}>
                     <h3>API Rick and Morty</h3>
                     <span>Api de Rick and Morty para entorno de pruebas.</span>

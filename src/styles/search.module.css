@@ -1,7 +1,7 @@
 .container__characters{
     padding: 20px;
-    margin: 10px;
-    height: 80vh;
+    margin: auto;
+    width: 80vw;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -15,7 +15,7 @@
     padding: 10px 30px;
     font-size: 1.0rem;
     margin-bottom: 30px;
-    color: #fff;
+    color: #3b3b3b;
 }
 .characters__button{
     color: orange;
@@ -46,9 +46,13 @@
     .container__characters{
         width: 94%;
     }
+    .container__characters form{
+        margin: 30px;
+        height: 30px;
+    }
     .characters__button{
         top: -65px;
-        left: 248px;
+        left: 220px;
     }
 }
 @media screen and (max-width:350px){

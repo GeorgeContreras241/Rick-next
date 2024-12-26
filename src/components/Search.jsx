@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext, useState } from 'react'
+import { useContext} from 'react'
 import { AcontextPagination } from '../contexts/PaginationProvider'
 import styles from "@/styles/search.module.css"
 import { useFetchCharacters } from '@/hooks/useFetchCharacters'
@@ -12,16 +12,15 @@ export const Search = () => {
     const { characters, info } = useFetchCharacters(url)
     
     const handleSearch = (e) => {
-        setSearch(e.target.value)
+        const value = e.target.value
+        setSearch(value)
+        setUrl(`https://rickandmortyapi.com/api/character/?page=1&name=${value}`)
     }
-    const onSubmit = (e) => {
-        setUrl(`https://rickandmortyapi.com/api/character/?page=1&name=${search}`)
-        e.preventDefault()
-    }
+  
 
     return (
         <div className={styles.container__characters}>
-            <form onSubmit={onSubmit}>
+            <form>
                 <input 
                     type="text" 
                     placeholder="Nombre Personaje"
@@ -29,7 +28,6 @@ export const Search = () => {
                     onChange={handleSearch}
                     className={styles.characters__input}
                 />
-                <button className={styles.characters__button}><CiSearch  className={styles.characters__icons}/></button>
             </form>
             <Fetch characters={characters} info={info}></Fetch>
         </div>

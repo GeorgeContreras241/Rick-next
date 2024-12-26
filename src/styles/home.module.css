@@ -1,5 +1,5 @@
 .container__home{
-  padding: 10px;
+  padding: 10px 25px;
   margin: auto;
   display: flex;
   flex-flow: column;
@@ -9,7 +9,7 @@
   margin-top:50px
 }
 .container__home > h3 {
-  color: aqua;
+  color: rgb(11, 75, 252);
   font-size: 3rem;
 }
 .container__home > p {
@@ -17,9 +17,10 @@
 }
 .button__home{
     margin-top: 40px;
-    background:#7e928d6c;
+    background: #0b4bfc;
     color:#fff;
     border:none;
+    border-radius: 15px;
     position:relative;
     height:45px;
     font-size:1.3em;
@@ -27,13 +28,14 @@
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
+
     font-family: 'Sofadi One', cursive;
   }
   .center{
     margin: auto;
   }
   .button__home:hover{
-    background: inherit;
+    background-color: #1131bc;
     color: #fff;
   }
   .button__home:before,.button__home:after{
@@ -43,7 +45,7 @@
     right:0;
     height:2px;
     width:0;
-    background: #fff;
+    background: #d6d6d6;
     transition:400ms ease all;
   }
   .button__home:after{
@@ -56,8 +58,3 @@
     width:100%;
     transition:800ms ease all;
   }
-@media screen and (max-width: 700px) {
-  .container__home{  
-    margin:  50px 0 0 10px ;
-  }
-}

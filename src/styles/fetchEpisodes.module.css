@@ -39,6 +39,8 @@
 }
 .details{
     padding: 5px 25px;
+    width: clamp(200px, 650px, 700px);
+    background-color: red;
 }
 .list__li{
     list-style: none;
@@ -46,4 +48,8 @@
     font-size: 1rem;
     margin-right: 10px;
 }
-
+@media screen and (max-width: 600px){
+    .details{
+        width: 100%;
+    }
+}

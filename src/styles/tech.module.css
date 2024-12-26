@@ -1,58 +1,55 @@
 .section__tech{
-    margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
-    max-width:  1050px;
+    width: 100%;
     justify-content: center;
 }
 .card{
     height: fit-content;
+    border: #BCBCBC 1px solid;
     border-radius: 10px;
-    max-width: 450px;
+    width: clamp(300px,350px,450px);
     margin: 15px;
     display: flex;
     padding: 12px;
     align-items: center;
-    background-color: #313849;
+    background-color: #e1e2e4;
+    background-color: rgba(182, 182, 182, 0.822);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.html{
-    font-size: 6rem;
-    color: orange;  
+.card:hover{
+    border: 1px solid #a0a0a0ad;
 }
-.css{
-    font-size: 6rem;
-    color: rgb(0, 47, 255);
-}
-.js{
-    font-size: 6rem;
-    color: green;
-}
-.nextjs{
-    font-size: 5.5rem;
-    padding: 0.5rem;
-    color: #fff;
-}
-.rickandmorty{
-    font-size: 6rem;
-    color: orange;
-}
+
 .card__html{
     display: flex;
     flex-flow: column nowrap;
     gap: 5px;
 }
 .card__html >  h3{
- font-size: 1.3rem;
+ font-size: 1.2rem;
  margin-left: 5px;
+ margin-bottom: 5px;
 }
 .card__html >  span{
-    margin-top: 10px;
-    margin-left: 12px;
+    margin-top: 5px;
+    font-size: .9rem;
+    margin-left: 5px;
+    color: rgb(61, 61, 61);
 }
 .card__html >  a{
     text-decoration: none;
     text-align: end;
     margin-right: 10px;
+    color: red;
+    font-family: cursive;
+    font-size: .8rem;
+    transform: scale(1);
+    transition: transform .2s ease-in-out;
+}
+.card__html >  a:hover{
+    color: rgba(255, 0, 0, 0.856);
+    transform: scale(1.01);
 }
 @media screen and (max-width:700px){
     .section__tech{

@@ -1,5 +1,4 @@
 "use client"
-import characters from "@/app/characters/page"
 import styles from "./../styles/fetchCharacters.module.css"
 import { useContext } from "react"
 import { AcontextPagination } from "@/contexts/PaginationProvider"
@@ -30,13 +29,13 @@ export const Fetch = ({ characters, info }) => {
             characters.map((item) => (
               <div className={styles.character__card} key={item.id}>
                 <div class={styles.character__image}>
-                  <img src={item.image} alt={item.name}></img>
+                  <img src={item.image} alt={item.name} className={styles.image}></img>
                 </div>
                 <article class={styles.character__info}>
                   <h3>{item.name}</h3>
                   <div className={styles.character__info__state}>
-                    <span>{item.status}</span>
-                    <span>{item.species}</span>
+                    <span className={item.status !== "Alive" ? styles.span__status : `${styles.span__status} ${styles.live}`}></span>
+                    <span className={styles.span__info}>{item.status} - {item.species}</span>
                   </div>
                   <p>Last known location:</p>
                   <span>{item.origin.name}</span>

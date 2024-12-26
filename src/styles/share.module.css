@@ -1,24 +1,35 @@
 .section__share{
     display: flex;
     flex-flow: column nowrap;
-    padding: 15px;
+    padding: 10px;
     align-items: flex-start;
-    margin-top: 30px;
+    gap: 10px;
+    margin-left: 20px;
+    width: fit-content;
 }
 .section__links{
     font-size: 2rem;
     padding: 15px;
-    border-radius: 9999px;
+    color: black;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.04);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.section__links a{
+    text-decoration: none;  
+    height: 100%;
+    width: 100%;
+}
+.icon{
+    color: black;
 }
 .section__links:hover{
-    scale: 1.1;
+    transform: scale(1.1);
 }
 @media screen and (max-width: 700px){
     .section__share{
         flex-flow: row nowrap;
         justify-content: center;
-        width: 100%;
-        margin-top: 0;
-        padding: 0;
+        margin: auto;
     }
 }
