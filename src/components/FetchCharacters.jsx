@@ -26,12 +26,13 @@ export const Fetch = ({ characters, info }) => {
       <section className={styles.character__profile}>
         <div className={styles.character__container}>
           {
+            characters.length === 0 ? <p>Sin resultados</p> :
             characters.map((item) => (
               <div className={styles.character__card} key={item.id}>
-                <div class={styles.character__image}>
+                <div className={styles.character__image}>
                   <img src={item.image} alt={item.name} className={styles.image}></img>
                 </div>
-                <article class={styles.character__info}>
+                <article className={styles.character__info}>
                   <h3>{item.name}</h3>
                   <div className={styles.character__info__state}>
                     <span className={item.status !== "Alive" ? styles.span__status : `${styles.span__status} ${styles.live}`}></span>

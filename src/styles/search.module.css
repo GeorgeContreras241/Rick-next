@@ -13,23 +13,11 @@
     border-radius: 8px;
     width: 650px;
     padding: 10px 30px;
-    font-size: 1.0rem;
+    font-size: .9rem;
     margin-bottom: 30px;
     color: #3b3b3b;
 }
-.characters__button{
-    color: orange;
-    background-color: inherit;
-    border: none;
-    position: relative;
-    left: -40px;
-    top: 11px;
-    transition: scale 1s ease;
-    cursor: pointer;
-}
-.characters__button:hover{
-    scale: 1.1;
-}
+
 .characters__icons{
     font-size: 2rem;
 }

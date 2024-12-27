@@ -40,11 +40,10 @@
 .details{
     padding: 5px 25px;
     width: clamp(200px, 650px, 700px);
-    background-color: red;
 }
 .list__li{
     list-style: none;
-    color: #c9c9c9;
+    color: #3b3b3b;
     font-size: 1rem;
     margin-right: 10px;
 }
